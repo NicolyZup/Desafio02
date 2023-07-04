@@ -1,7 +1,6 @@
-package org.example.bancoDeDados;
+package org.example.dataBase;
 
-import org.example.Cliente;
-import org.example.Vendedor;
+import org.example.models.Cliente;
 
 import java.util.ArrayList;
 import java.util.List;

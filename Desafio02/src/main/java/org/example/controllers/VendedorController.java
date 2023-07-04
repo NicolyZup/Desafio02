@@ -1,8 +1,8 @@
 package org.example.controllers;
 
-import org.example.Cliente;
-import org.example.Vendedor;
-import org.example.bancoDeDados.BancoDeVendedores;
+import org.example.dataBase.BancoDeVendas;
+import org.example.models.Vendedor;
+import org.example.dataBase.BancoDeVendedores;
 
 public class VendedorController {
     BancoDeVendedores bancoDeVendedores = new BancoDeVendedores();
@@ -51,11 +51,15 @@ public class VendedorController {
     }
 
     public void listarVendedores(){
-        for(Vendedor vendedor: bancoDeVendedores.getVendedores()){
-            System.out.println("--------------------------");
-            System.out.println("Nome: "+vendedor.getNome());
-            System.out.println("cpf: "+vendedor.getCpf());
-            System.out.println("e-mail: "+vendedor.getEmail());
+        if(bancoDeVendedores.getVendedores().size() ==0){
+            System.out.println("Nenhum vendedor cadastrado.");
+        } else {
+            for (Vendedor vendedor : bancoDeVendedores.getVendedores()) {
+                System.out.println("--------------------------");
+                System.out.println("Nome: " + vendedor.getNome());
+                System.out.println("cpf: " + vendedor.getCpf());
+                System.out.println("e-mail: " + vendedor.getEmail());
+            }
         }
     }
 }

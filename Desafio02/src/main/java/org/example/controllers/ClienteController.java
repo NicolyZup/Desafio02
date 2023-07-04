@@ -1,12 +1,12 @@
 package org.example.controllers;
 
-import org.example.Cliente;
-import org.example.Vendedor;
-import org.example.bancoDeDados.BancoDeClientes;
+import org.example.dataBase.BancoDeVendas;
+import org.example.models.Cliente;
+import org.example.dataBase.BancoDeClientes;
 
 public class ClienteController {
-
     BancoDeClientes bancoDeClientes = new BancoDeClientes();
+
     public boolean verificarCadastroCliente(String cpf){
         if(bancoDeClientes.verificaClienteExistente(cpf)){
             System.out.println("Cliente cadastrado(a)!");
@@ -51,11 +51,16 @@ public class ClienteController {
     }
 
     public void listarClientes(){
-        for(Cliente cliente: bancoDeClientes.getClientes()){
-            System.out.println("--------------------------");
-            System.out.println("Nome: "+cliente.getNome());
-            System.out.println("cpf: "+cliente.getCpf());
-            System.out.println("e-mail: "+cliente.getEmail());
+        if(bancoDeClientes.getClientes().size() ==0){
+            System.out.println("Nenhum cliente cadastrado.");
+        } else {
+            for (Cliente cliente : bancoDeClientes.getClientes()) {
+                System.out.println("--------------------------");
+                System.out.println("Nome: " + cliente.getNome());
+                System.out.println("cpf: " + cliente.getCpf());
+                System.out.println("e-mail: " + cliente.getEmail());
+            }
         }
     }
+
 }

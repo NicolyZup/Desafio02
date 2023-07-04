@@ -1,6 +1,6 @@
-package org.example.bancoDeDados;
+package org.example.dataBase;
 
-import org.example.Venda;
+import org.example.models.Venda;
 
 import java.util.ArrayList;
 import java.util.List;
