@@ -19,7 +19,6 @@ import java.time.LocalDate;
 @ExtendWith(MockitoExtension.class)
 public class VendaControllerTest {
     @Mock
-    private BancoDeVendas bancoDeVendas;
     private ByteArrayOutputStream saida;
 
     @InjectMocks
