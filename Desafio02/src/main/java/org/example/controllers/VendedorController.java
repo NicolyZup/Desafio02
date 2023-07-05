@@ -1,6 +1,5 @@
 package org.example.controllers;
 
-import org.example.dataBase.BancoDeVendas;
 import org.example.models.Vendedor;
 import org.example.dataBase.BancoDeVendedores;
 
