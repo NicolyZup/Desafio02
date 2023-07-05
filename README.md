@@ -62,7 +62,7 @@ através de seu e-mail.
 - estruturas de decisão: switch/case, if/else;
 
 ## Testes
-- Os testes foram aplicados para as classes da pasta controllers, na qual contém maior parte da lógica e validações do sistema. A cobertura foi de 90% das classes e 30% das linhas.
+- Os testes foram aplicados para as classes da pasta controllers, na qual contém maior parte da lógica e validações do sistema. A cobertura total foi de 90% das classes e 30% das linhas.
   
 ![image](https://github.com/NicolyZup/Desafio02/assets/133882322/6b6144d5-8edf-4c74-8269-abcce49a15f4)
 
